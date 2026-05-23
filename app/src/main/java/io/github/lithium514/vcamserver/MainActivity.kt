@@ -56,12 +56,12 @@ fun VCamServerScreen(modifier: Modifier = Modifier) {
 
     val startServer: () -> Unit = {
         try {
-            val newServer = VCamHttpServer(context, 8080)
+            val newServer = VCamHttpServer(context, 5000)
             newServer.start()
             server = newServer
             isRunning = true
             val ip = VCamHttpServer.getLocalIpAddress()
-            statusMessage = "Running at http://$ip:8080\nPOST images to /upload"
+            statusMessage = "Running at http://$ip:5000\nPOST images to /upload"
         } catch (e: IOException) {
             statusMessage = "Failed to start: ${e.message}"
             isRunning = false

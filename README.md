@@ -4,7 +4,7 @@
 
 ## 功能
 
-- 启动本地 HTTP 服务器（端口 **8080**）
+- 启动本地 HTTP 服务器（端口 **5000**）
 - 自动检测并显示设备 IP 地址
 - `POST /upload` — 接收 multipart 图片上传并保存到 `Pictures/VCam/` 目录
 - `GET /` — 健康检查
@@ -17,7 +17,7 @@
 4. 在局域网内的其他设备上发送图片：
 
 ```bash
-curl -X POST http://<设备IP>:8080/upload \
+curl -X POST http://<设备IP>:5000/upload \
   -F "image=@/path/to/photo.jpg"
 ```
 
